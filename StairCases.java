@@ -22,6 +22,7 @@ public class StairCases
     int size = keyboard.nextInt();
 
     printAscending(size);
+    System.out.println("");
     printDescending(size);
   }
 
@@ -32,33 +33,35 @@ public class StairCases
   public static void printAscending(int size)
   //TODO Finish this method
   {
-   for (int counter = 0; counter < size; counter++)
-   {
-    for (int stars = 0; stars < counter + 1; stars++)
+ 	if (size >= 0){
+
+ 	 printAscending(size-1);
+ 	}
+    for (int counter = 0; counter < size; counter++)
     {
      System.out.print("*");
     }
-   
+    
     System.out.print("\n");
-   }
   }
 
   /**
    * This method prints a descending staircase
    * @param size The amount of stairs there will be, this variable is inputed by the user 
    */
-  public static void printDescending(int size)
+  public static String printDescending(int size)
   {
   //TODO Finish this method
-   System.out.println("\n");
-   for (int counter = size; counter > 0; counter--)
-   {
-    for (int stars = 0; stars < counter; stars ++)
-    {
-     System.out.print("*");
-    }
-    System.out.print("\n"); 
+  if (size == 0){
+     return "";
    }
-  }
+   for (int counter = 0; counter < size; counter++)
+   {
+    System.out.print("*");
+   }
+   System.out.print("\n");
 
+   size--; 
+   return printDescending(size);
+  }
 }
