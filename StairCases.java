@@ -31,7 +31,6 @@ public class StairCases
    * @param size The amount of stairs there will be, this variable is inputed by the user 
    */
   public static void printAscending(int size)
-  //TODO Finish this method
   {
  	if (size >= 0){
 
@@ -51,7 +50,6 @@ public class StairCases
    */
   public static String printDescending(int size)
   {
-  //TODO Finish this method
   if (size == 0){
      return "";
    }
